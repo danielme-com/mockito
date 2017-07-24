@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.danielme.blog</groupId>
+	<artifactId>mockito</artifactId>
+	<version>1.0</version>
+	<name>mockito testing</name>
+	<packaging>jar</packaging>
+
+	<description>Mockito testing</description>
+	<url>https://danielme.com/2017/07/22/tutorial-test-doubles-mockito/</url>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<mavencompiler.version>3.2</mavencompiler.version>
+		<mockito.version>2.8.9</mockito.version>
+		<junit.version>4.12</junit.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<plugins>
+
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${mavencompiler.version}</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<source>${jre.version}</source>
+					<target>${jre.version}</target>
+				</configuration>
+			</plugin>
+
+		</plugins>
+
+	</build>
+</project>
