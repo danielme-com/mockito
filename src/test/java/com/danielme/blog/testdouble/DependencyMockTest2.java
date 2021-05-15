@@ -19,8 +19,8 @@ public class DependencyMockTest2 {
 
 	@Before
 	public void setupMock() {
-		MockitoAnnotations.initMocks(this);
-		//dependency = new Dependency(subDependency);	
+		MockitoAnnotations.openMocks(this);
+		//dependency = new Dependency(subDependency);
 	}
 
 	@Test

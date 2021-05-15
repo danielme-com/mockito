@@ -2,27 +2,31 @@ package com.danielme.blog.testdouble;
 
 public class Dependency {
 
-	private final SubDependency subDependency;
+    private final SubDependency subDependency;
 
-	public Dependency(SubDependency subDependency) {
-		super();
-		this.subDependency = subDependency;
-	}
+    public Dependency(SubDependency subDependency) {
+        super();
+        this.subDependency = subDependency;
+    }
 
-	public String getClassName() {
-		return this.getClass().getSimpleName();
-	}
+    public String getClassName() {
+        return this.getClass().getSimpleName();
+    }
 
-	public String getSubdepedencyClassName() {
-		return subDependency.getClassName();
-	}
+    public String getSubdepedencyClassName() {
+        return subDependency.getClassName();
+    }
 
-	public int addTwo(int i) {
-		return i + 2;
-	}
+    public int addTwo(int i) {
+        return i + 2;
+    }
 
-	public String getClassNameUpperCase() {
-		return getClassName().toUpperCase();
-	}
+    public String getClassNameUpperCase() {
+        return getClassName().toUpperCase();
+    }
+
+    public void printMessage(String msg) {
+        System.out.println(msg);
+    }
 
 }

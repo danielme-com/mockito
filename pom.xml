@@ -15,8 +15,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
 		<mavencompiler.version>3.2</mavencompiler.version>
-		<mockito.version>2.8.9</mockito.version>
-		<junit.version>4.12</junit.version>
+		<mockito.version>3.10.0</mockito.version>
+		<junit.version>4.13.2</junit.version>
 	</properties>
 
 	<dependencies>
@@ -46,8 +46,8 @@
 				<version>${mavencompiler.version}</version>
 				<configuration>
 					<encoding>${project.build.sourceEncoding}</encoding>
-					<source>${jre.version}</source>
-					<target>${jre.version}</target>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
 				</configuration>
 			</plugin>
 
