@@ -42,12 +42,14 @@ public class DependencyMockTest {
     @Test
     public void testDependency() {
         when(dependency.getClassName()).thenReturn("hi there");
+
         assertEquals("hi there", dependency.getClassName());
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testException() {
         when(dependency.getClassName()).thenThrow(IllegalArgumentException.class);
+
         dependency.getClassName();
     }
 
@@ -64,6 +66,7 @@ public class DependencyMockTest {
     @Test
     public void testAddTwo() {
         when(dependency.addTwo(1)).thenReturn(5);
+
         assertEquals(5, dependency.addTwo(1));
         assertEquals(0, dependency.addTwo(27));
     }
@@ -71,6 +74,7 @@ public class DependencyMockTest {
     @Test
     public void testAddTwoAny() {
         when(dependency.addTwo(anyInt())).thenReturn(0);
+
         assertEquals(0, dependency.addTwo(3));
         assertEquals(0, dependency.addTwo(80));
     }

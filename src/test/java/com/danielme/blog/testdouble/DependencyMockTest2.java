@@ -25,7 +25,8 @@ public class DependencyMockTest2 {
 
 	@Test
 	public void testSubdependency() {
-		when(subDependency.getClassName()).thenReturn("hi there 2");		
+		when(subDependency.getClassName()).thenReturn("hi there 2");
+
 		assertEquals("hi there 2", dependency.getSubdepedencyClassName());
 	}	
 	

@@ -26,6 +26,7 @@ public class DependencySpyTest {
 	@Test
 	public void testSpy() {
 		when(dependency.addTwo(Mockito.anyInt())).thenReturn(3);
+
 		assertEquals(3, dependency.addTwo(27));
 		assertEquals(SubDependency.class.getSimpleName(), dependency.getSubdepedencyClassName());
 	}
