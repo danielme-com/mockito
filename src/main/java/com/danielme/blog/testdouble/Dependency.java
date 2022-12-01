@@ -13,7 +13,7 @@ public class Dependency {
         return this.getClass().getSimpleName();
     }
 
-    public String getSubdepedencyClassName() {
+    public String getSubdependencyClassName() {
         return subDependency.getClassName();
     }
 
@@ -27,6 +27,10 @@ public class Dependency {
 
     public void printMessage(String msg) {
         System.out.println(msg);
+    }
+
+    public String surpriseMe() {
+        throw new RuntimeException("Ah-Ha!");
     }
 
 }

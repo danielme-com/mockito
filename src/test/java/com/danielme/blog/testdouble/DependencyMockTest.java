@@ -3,11 +3,9 @@ package com.danielme.blog.testdouble;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnit;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.MockitoRule;
 import org.mockito.stubbing.Answer;
 
@@ -36,7 +34,8 @@ public class DependencyMockTest {
     public void testDummy() {
         assertNull(dependency.getClassName());
         assertNull(dependency.getClassNameUpperCase());
-        assertNull(dependency.getSubdepedencyClassName());
+        assertNull(dependency.getSubdependencyClassName());
+        assertEquals(0, dependency.addTwo(2323));
     }
 
     @Test
@@ -73,11 +72,13 @@ public class DependencyMockTest {
 
     @Test
     public void testAddTwoAny() {
-        when(dependency.addTwo(anyInt())).thenReturn(0);
+        when(dependency.addTwo(anyInt())).thenReturn(2);
+        doReturn(2).when(dependency).addTwo(anyInt());
 
-        assertEquals(0, dependency.addTwo(3));
-        assertEquals(0, dependency.addTwo(80));
+        assertEquals(2, dependency.addTwo(3));
+        assertEquals(2, dependency.addTwo(80));
     }
+
 
     @Test
     public void testVoidDoAnswer() {

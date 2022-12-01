@@ -9,7 +9,6 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import static org.mockito.Mockito.*;
 
-import com.danielme.blog.testdouble.SubDependency;
 public class DependencyMockTest2 {
 
 	@Mock
@@ -27,7 +26,7 @@ public class DependencyMockTest2 {
 	public void testSubdependency() {
 		when(subDependency.getClassName()).thenReturn("hi there 2");
 
-		assertEquals("hi there 2", dependency.getSubdepedencyClassName());
+		assertEquals("hi there 2", dependency.getSubdependencyClassName());
 	}	
 	
 }
